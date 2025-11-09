@@ -1,0 +1,23 @@
+:root {
+  --umbc-gold:#FFC20E;
+  --umbc-black:#000;
+}
+.navbar-logo{height:60px;width:auto;margin-right:20px}
+.navbar{background:#fff!important;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.hero-section{
+  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('../images/hero-bg.jpg');
+  background-size:cover;background-position:center;color:#fff;
+  padding:100px 0;min-height:500px;display:flex;align-items:center
+}
+.hero-title{font-size:3.5rem;font-weight:700;margin-bottom:20px;color:var(--umbc-gold)}
+.hero-subtitle{font-size:1.3rem;margin-bottom:30px}
+.btn-umbc-gold{background:var(--umbc-gold);color:var(--umbc-black);border:0;padding:12px 30px;font-weight:700;border-radius:5px}
+.btn-umbc-gold:hover{background:#e6ae0d;color:var(--umbc-black)}
+.feature-card{border:0;box-shadow:0 4px 6px rgba(0,0,0,.1);transition:transform .3s;height:100%}
+.feature-card:hover{transform:translateY(-5px);box-shadow:0 6px 12px rgba(0,0,0,.15)}
+.feature-icon{font-size:3rem;color:var(--umbc-gold);margin-bottom:20px}
+.section-title{font-size:2.5rem;font-weight:700;margin-bottom:40px;text-align:center}
+.announcement-card{border-left:4px solid var(--umbc-gold);margin-bottom:20px}
+footer{background:var(--umbc-black);color:#fff;padding:40px 0 20px}
+footer a{color:#fff;text-decoration:none}
+footer a:hover{color:var(--umbc-gold)}
