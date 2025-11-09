@@ -1,26 +1,43 @@
 :root {
   --umbc-gold: #FFC20E;
-  --umbc-black: #000000;
+  --text-light: #E4E4E7;
+  --text-muted: #A1A1AA;
+  --bg-dark: #1E1E20;
+  --bg-surface: #2A2B2D;
 }
 
-.navbar-logo {
-  height: 60px;
-  width: auto;
-  margin-right: 20px;
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
 }
 
 .navbar {
-  background-color: white !important;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: var(--bg-surface) !important;
+  border-bottom: 1px solid #3a3a3d;
+}
+
+.navbar-logo {
+  height: 50px;
+  width: auto;
+}
+
+.nav-link {
+  color: var(--text-light) !important;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: var(--umbc-gold) !important;
+  font-weight: bold;
 }
 
 .hero-section {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-bg.jpg');
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../hero-bg.jpg');
   background-size: cover;
   background-position: center;
-  color: white;
+  color: var(--text-light);
   padding: 100px 0;
-  min-height: 500px;
+  min-height: 400px;
   display: flex;
   align-items: center;
 }
@@ -28,39 +45,46 @@
 .hero-title {
   font-size: 3.5rem;
   font-weight: bold;
-  margin-bottom: 20px;
   color: var(--umbc-gold);
 }
 
 .hero-subtitle {
-  font-size: 1.3rem;
-  margin-bottom: 30px;
+  color: var(--text-muted);
 }
 
+/* BUTTONS */
 .btn-umbc-gold {
   background-color: var(--umbc-gold);
-  color: var(--umbc-black);
-  border: none;
-  padding: 12px 30px;
+  color: var(--bg-dark);
   font-weight: bold;
   border-radius: 5px;
+  padding: 12px 30px;
 }
 
 .btn-umbc-gold:hover {
   background-color: #e6ae0d;
-  color: var(--umbc-black);
+}
+
+.btn-outline-light {
+  border-color: var(--text-light);
+  color: var(--text-light);
+}
+
+.btn-outline-light:hover {
+  background-color: var(--text-light);
+  color: var(--bg-dark);
 }
 
 .feature-card {
+  background-color: var(--bg-surface);
   border: none;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-  height: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  transition: transform .3s;
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .feature-icon {
@@ -69,29 +93,93 @@
   margin-bottom: 20px;
 }
 
-.section-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 40px;
-  text-align: center;
+form input, form textarea {
+  background-color: var(--bg-surface);
+  border: 1px solid #3a3a3d;
+  color: var(--text-light);
 }
 
-.announcement-card {
-  border-left: 4px solid var(--umbc-gold);
-  margin-bottom: 20px;
+form input::placeholder, form textarea::placeholder {
+  color: var(--text-muted);
 }
 
 footer {
-  background-color: var(--umbc-black);
-  color: white;
-  padding: 40px 0 20px;
+  background-color: var(--bg-surface);
+  color: var(--text-light);
+  padding: 40px 0;
+  border-top: 1px solid #3a3a3d;
 }
 
 footer a {
-  color: white;
-  text-decoration: none;
+  color: var(--text-light);
 }
 
 footer a:hover {
   color: var(--umbc-gold);
 }
+
+.text-muted {
+  color: var(--text-light) !important;
+}
+
+.feature-card .card-body p,
+.feature-card .card-body h3,
+.feature-card .card-body h5 {
+  color: var(--text-light) !important;
+}
+
+.section-title,
+h3.h5,
+h3.h4,
+.card-title {
+  color: var(--text-light) !important;
+}
+
+.sidebar-links a {
+  color: var(--text-light);
+  display: block;
+  padding: 6px 0;
+}
+.sidebar-links a:hover {
+  color: var(--umbc-gold);
+}
+
+.program-box {
+  background-color: var(--bg-surface);
+  color: var(--text-light);
+  padding: 15px;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+  border: 1px solid #3a3a3d;
+}
+.program-box:hover {
+  border-color: var(--umbc-gold);
+  color: var(--umbc-gold);
+}
+
+.navbar-toggler {
+  border-color: var(--text-light) !important;
+}
+
+.navbar-toggler-icon {
+  filter: invert(100%) brightness(200%);
+}
+
+.text-muted .opportunity-link,
+.opportunity-link,
+.text-muted a.opportunity-link,
+p.text-muted a.opportunity-link,
+p a.opportunity-link {
+  color: var(--umbc-gold) !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+
+.text-muted .opportunity-link:hover,
+.opportunity-link:hover,
+p.text-muted a.opportunity-link:hover {
+  color: #e6ae0d !important;
+  text-decoration: underline !important;
+}
+
